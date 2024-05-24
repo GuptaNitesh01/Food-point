@@ -1,9 +1,7 @@
-const Filters=()=>{
+const Filters = () => {
     return(
-        <>
-            <p>This is Filter</p>
-        </>
+      <div className='text-center'>this is filters </div>
     )
   }
-  
-  export default Filters
+
+  export default Filters;

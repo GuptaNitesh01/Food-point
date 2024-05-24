@@ -1,8 +1,7 @@
-const Searchbar=()=>{
+const Searchbar = () => {
     return(
-        <>
-            <p>This is searchbar</p>
-        </>
+      <div className='text-center'> this is searchbar</div>
     )
-  }
-  export default Searchbar
+    }
+  
+    export default Searchbar;

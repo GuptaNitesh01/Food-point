@@ -1,10 +1,7 @@
-const Carousel=()=>{
+const Carousel = () => {
     return(
-        <>
-            <p className="text-center">This is Carousel</p>
-            
-        </>
+      <div className='text-center'> this is caraousel</div>
     )
   }
   
-  export default Carousel
+  export default Carousel;
