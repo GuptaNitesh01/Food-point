@@ -9,3 +9,29 @@
   object-fit:cover;
   border-radius: 20px;
 }
+.footer{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: black;
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.second-footer{
+  padding: 30px;
+  text-align: center;
+  font-weight: 10px;
+  background-color: rgb(240, 240, 245);;
+}
+.button{
+  text-align: center;
+  padding: 30px;
+  background-color: aqua;
+  margin:20px;
+}
+.button,button{
+  color: black;
+  font-weight: 20px;
+  border: none;
+}
