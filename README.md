@@ -73,4 +73,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
  two types are there which we have to use :
  1. Default imports/exports.
  2. Named imports/exports.
-
+ 3. React Hooks :  useState, useEffect 

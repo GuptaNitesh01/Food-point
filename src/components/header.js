@@ -1,4 +1,4 @@
-import logo from '../assets/images/headerlogo.jpg';
+import Logo from '../assets/images/headerlogo1.jpg';
 
 const Header = () => {
     return(
@@ -6,7 +6,7 @@ const Header = () => {
       <nav className ="navbar navbar-expand-sm bg-light navbar-light ">
       <div className ="container-fluid">
         <a className ="navbar-brand" href="#">
-          <img src = {logo} width="120px" height="70px" />
+          <img src = {Logo} width="120px" height="70px" />
           </a>
         <button className ="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
           <span className ="navbar-toggler-icon"></span>
