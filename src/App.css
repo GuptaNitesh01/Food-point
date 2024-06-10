@@ -27,11 +27,28 @@
 .button{
   text-align: center;
   padding: 30px;
-  background-color: aqua;
-  margin:20px;
+  background-color: rgb(235, 177, 122);
+  margin:20px 20px 20px 20px;
 }
 .button,button{
   color: black;
   font-weight: 20px;
   border: none;
+}
+.name{
+ text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+
+}
+.cuisines{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.custom-input{
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 30px;
 }

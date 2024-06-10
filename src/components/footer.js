@@ -4,6 +4,9 @@ export const Footer = () => {
         <div className="second-footer">
         <h5>FOR BETTER EXPERIENCED DOWNLOAD THE SWIGGY APP NOW </h5>
         </div>
+        <div>
+          <p></p>
+        </div>
       <div  className="footer">
       <div> 
       <h4>Swiggy</h4> 
@@ -49,4 +52,4 @@ export const Footer = () => {
     )
   }
 
-  // export default Footer;
+// export default Footer;
