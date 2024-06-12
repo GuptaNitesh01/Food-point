@@ -4,7 +4,7 @@ import Logo from "./assets/images/headerlogo1.jpg";
 
 import Header from "./components/header";
 import Body from "./components/body";
-import {Footer} from "./components/Footer";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
