@@ -3,26 +3,44 @@ import { restaurantList } from "../const/config";
 import { useEffect, useState } from "react";
 
 const Cardcomponent = () => {
+  const[count,setCount] = useState(0);
   const [restaurantData,setRestaurantData] = useState([]);
-  
-    const getRestaurants = async()  =>{
-      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.07480&lng=72.88560&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-      const json = await data.json();
-      console.log("json",json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      setRestaurantData(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+  const [restaurantCollection,setRestaurantCollection] = useState([]);
+  const [searchtext,setSearchText] = useState("");
+  console.log("restaurantList",restaurantData);
+
+    const handleSearchText = (event) => {
+      console.log("function is called ",searchtext);
+      setSearchText(event.target.value);
     }
 
+    const filterData = () => {
+         const filteredData = restaurantCollection.filter((restaurant) => {
+          return restaurant?.info?.name.toLowerCase().includes(searchtext.toLowerCase())
+         })
+
+         setRestaurantData(filteredData);
+      }
     useEffect(() =>{
+      const getRestaurants = async()  =>{
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.07480&lng=72.88560&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        console.log("json",json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setRestaurantData(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setRestaurantCollection(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      }
+      
       getRestaurants(); 
     },[])
 
-    console.log("is render ");
+    console.log("Component is render ");
 
   return (
     <div>
       <div className="container my-3">
-        <input type="text" className="custom-input" placeholder="Enter name of restaurant "/>
-        <button className="btn btn-light">🔍</button>
+        <input type="text" className="custom-input" placeholder="Enter name of restaurant " value={searchtext}
+        onChange={handleSearchText}/>
+        <button className="button btn-warning">🔍</button>
       </div>
     <div className="container d-flex flex-wrap gap-4">
       {restaurantData.map((restaurant) => {

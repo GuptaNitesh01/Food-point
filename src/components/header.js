@@ -3,7 +3,7 @@ import Logo from '../assets/images/headerlogo1.jpg';
 const Header = () => {
     return(
       <>
-      <nav className ="navbar navbar-expand-sm bg-light navbar-light ">
+      <nav className ="navbar navbar-expand-sm bg-info navbar-light ">
       <div className ="container-fluid">
         <a className ="navbar-brand" href="#">
           <img src = {Logo} width="120px" height="70px" />
