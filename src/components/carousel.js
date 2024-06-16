@@ -1,6 +1,10 @@
 const Carousel = () => {
     return(
-      <div className='text-center'> this is caraousel</div>
+    
+      <div>
+        <h1> this is caraousel</h1>
+      </div>
+      
     )
   }
   

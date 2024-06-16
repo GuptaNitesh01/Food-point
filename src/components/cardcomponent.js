@@ -1,11 +1,12 @@
 import Restaurantcard from "./restaurentcard";
 import { restaurantList } from "../const/config";
 import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
 
 const Cardcomponent = () => {
   const[count,setCount] = useState(0);
   const [restaurantData,setRestaurantData] = useState([]);
-  const [loading,setLoading] = useState(true)
+  const [loading,setLoading] = useState(true) 
   const [restaurantCollection,setRestaurantCollection] = useState([]);
   const [searchtext,setSearchText] = useState("");
   console.log("restaurantList",restaurantData);
@@ -41,7 +42,7 @@ const Cardcomponent = () => {
     if(loading){
       return (
         <div className="container d-flex flex-wrap gap-4">
-      <shimmer/>
+      <Shimmer/>
       </div>
       )
     }
@@ -51,7 +52,7 @@ const Cardcomponent = () => {
       <div className="container my-3">
         <input type="text" className="custom-input" placeholder="Enter name of restaurant " value={searchtext}
         onChange={handleSearchText}/>
-        <button className="button btn-warning">🔍</button>
+        <button className="button btn-warning" onClick={filterData}>🔍</button>
       </div>
     <div className="container d-flex flex-wrap gap-4">
       {restaurantData.map((restaurant) => {
