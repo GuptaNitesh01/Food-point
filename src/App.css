@@ -3,6 +3,9 @@
   max-width:250px;
   cursor: pointer;
   transition: 2s;
+  box-sizing: border-box;
+  /* align-items: center;
+  justify-content: space-between; */
 }
 
 .custom-card img{
