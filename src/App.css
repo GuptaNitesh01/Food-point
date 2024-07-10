@@ -2,10 +2,9 @@
   width:100%;
   max-width:250px;
   cursor: pointer;
-  transition: 2s;
+  /* transition: 2s; */
   box-sizing: border-box;
-  /* align-items: center;
-  justify-content: space-between; */
+  margin: auto;
 }
 
 .custom-card img{
@@ -17,7 +16,8 @@
   box-shadow: 1px 4px 8px gainsboro;
 }
 .custom-card:hover{
-  transform: scale(0.8);
+  transform: scale(90%);
+  transition: 0.5s;
 }
 .footer{
   padding-top: 50px;
@@ -70,4 +70,10 @@ white-space: nowrap;
   height: 200px;
   width: 100%;
   background-color: rgb(223, 220, 220);
+}
+
+.filter_btn{
+  margin: auto;
+  display: flex;
+  
 }

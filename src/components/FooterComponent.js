@@ -3,6 +3,8 @@ const Footer = () => {
       <div>
         <div className="second-footer">
         <h5>FOR BETTER EXPERIENCED DOWNLOAD THE SWIGGY APP NOW </h5>
+        <img class="sc-kAyceB fAqgqV sc-hoLEA dfHuvO" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/play_store.png" alt="Download Android App"></img>
+        <img class="sc-kAyceB fAqgqV sc-hoLEA dfHuvO" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/app_store.png" alt="Download iOS App"></img>
         </div>
         <div>
           <p></p>

@@ -1,4 +1,5 @@
 import Logo from '../assets/images/logo .png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return(
@@ -14,16 +15,16 @@ const Header = () => {
         <div className ="collapse navbar-collapse justify-content-end " id="collapsibleNavbar">
           <ul className ="navbar-nav">
             <li className ="nav-item">
-              <a className ="nav-link" href="#"> Home🏠</a>
+              <Link to className ="nav-link"> Home🏠</Link>
             </li>
             <li className ="nav-item">
-              <a className ="nav-link" href="#">About us 😶‍🌫️</a>
+              <Link className ="nav-link" to="/about">About us 😶‍🌫️</Link>
             </li>
             <li className ="nav-item">
-              <a className ="nav-link" href="#">Contact us 📞 </a>
+              <Link className ="nav-link" to="/contact">Contact us 📞 </Link>
             </li>    
             <li className ="nav-item">
-              <a className ="nav-link" href="#"> Cart 🛒</a>
+              <Link className ="nav-link" to="/cart"> Cart 🛒</Link>
             </li>   
           </ul>
         </div>

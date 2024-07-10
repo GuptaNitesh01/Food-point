@@ -1,4 +1,5 @@
 import Restaurantcard from "./restaurentcard";
+import errorimg from "../assets/images/errorimage.png";
 import { restaurantList } from "../const/config";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
@@ -82,7 +83,7 @@ const Cardcomponent = () => {
     if(isfailed){
       return(
         <div>
-          <h2>Something Went wrong</h2>
+          <img src={errorimg}/>
           
         </div>
       )
@@ -96,11 +97,11 @@ const Cardcomponent = () => {
         onChange={handleSearchText}/>
         <button className="button btn-warning" onClick={filterData}>🔍</button>
       </div>
-      <div>
-      <button className="btn btn-sm btn-danger" onClick={handleDelivery}>Fast Delivery</button>
-      <button className="btn btn-sm btn-danger" onClick={handleRating}>Top Rated</button>
-      <button className="btn btn-sm btn-danger" onClick={handleVeg}>Pure Veg</button>
-      <button className="btn btn-sm btn-danger" onClick={reset}>Show All</button>
+      <div className="filter_btn">
+      <button className="btn btn-sm btn-danger " onClick={handleDelivery}>Fast Delivery</button>
+      <button className="btn btn-sm btn-danger " onClick={handleRating}>Top Rated</button>
+      <button className="btn btn-sm btn-danger " onClick={handleVeg}>Pure Veg</button>
+      <button className="btn btn-sm btn-danger " onClick={reset}>Show All</button>
       </div>
       </div>
     <div className="container d-flex flex-wrap gap-4">
